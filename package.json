@@ -1,0 +1,20 @@
+{
+  "name": "@pipeworx/mcp-rss2json",
+  "version": "0.1.0",
+  "description": "rss2json: convert any RSS/Atom feed to JSON. Keyless basic, optional API key for count.",
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "rss2json"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pipeworx-io/mcp-rss2json"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0"
+  }
+}
