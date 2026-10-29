@@ -1,0 +1,25 @@
+[
+  {
+    "name": "feed",
+    "description": "Fetch RSS/Atom feed as JSON.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "rss_url": {
+          "type": "string"
+        },
+        "count": {
+          "type": "number",
+          "description": "Max items to return. Applied locally when no api_key is supplied (rss2json only honours it for keyed callers), so it always works."
+        },
+        "api_key": {
+          "type": "string",
+          "description": "Optional free rss2json API key for higher limits."
+        }
+      },
+      "required": [
+        "rss_url"
+      ]
+    }
+  }
+]

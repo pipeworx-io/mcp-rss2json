@@ -1,12 +1,20 @@
 {
   "name": "@pipeworx/mcp-rss2json",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "rss2json MCP.",
   "type": "module",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./tools.json": "./tools.json",
+    "./package.json": "./package.json"
+  },
   "bin": {
     "mcp-rss2json": "bin/cli.js"
+  },
+  "files": ["bin/", "lib/", "tools.json", "server.json"],
+  "engines": {
+    "node": ">=18"
   },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "rss2json"],
   "license": "MIT",
@@ -14,19 +22,12 @@
     "type": "git",
     "url": "git+https://github.com/pipeworx-io/mcp-rss2json.git"
   },
-  "scripts": {
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.30.0",
-    "tsx": "^4.19.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.9.3",
-    "@cloudflare/workers-types": "^4.20260405.1"
-  },
+  "mcpName": "io.github.pipeworx-io/rss2json",
   "pipeworx": {
-    "sourceHash": "v1-c53b1312b7b0ac791f9d2c4d6a5c10373431486c9e8771fbc629f662beceb59d",
-    "sourceCommit": "6fe8fb3e01138dfc4ebe7d5c246503aab9278d06"
+    "mode": "gateway",
+    "slug": "rss2json",
+    "gatewaySlug": "rss2json",
+    "sourceHash": "v1-19603db5edfc9b857d81b95a67b6fdb05d48f63ef4e453a7fb77cd4b35687b22",
+    "sourceCommit": "6bae4cfa7b6a73bbe014dc8820a19c80c842b21e"
   }
 }
